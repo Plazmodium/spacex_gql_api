@@ -13,7 +13,6 @@ export default (app, { schema, context }) => {
       apiKey: process.env.ENGINE_API_KEY
     },
     validationRules: [depthLimit(10), createComplexityLimitRule(1000)],
-    playground: true,
     introspection: true
   });
 
