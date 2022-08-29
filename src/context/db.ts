@@ -8,6 +8,7 @@ export const getDB = async () => {
   const client = await MongoClient.connect(
     url,
     { poolSize: 20, useNewUrlParser: true }
+    
   );
 
   return client.db('spacex-api');
