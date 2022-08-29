@@ -1,0 +1,18 @@
+{
+    "version": 4,
+    "builds":[
+        {
+            "src": "public/dist/index.ts",
+            "use":"@vercel/node",
+            "config": {
+                "includeFiles": ["public/dist/**"]
+            }
+        }
+    ],
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest":"public/dist/index.ts"
+        }
+    ]
+}
